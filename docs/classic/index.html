@@ -3,25 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#7458ed">
+  <meta name="theme-color" content="#fbfaff">
   <meta name="description" content="ANNAELLE — аналитика студии: продажи, клиенты, абонементы и работа команды. Интерактивный демонстрационный макет.">
   <title>ANNAELLE · Аналитика студии</title>
+  <script src="appearance.js?v=20261007-2"></script>
   <link rel="icon" href="assets/annaelle-symbol-ink.svg" type="image/svg+xml">
   <link rel="preload" href="assets/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css?v=20261007-5">
   <link rel="stylesheet" href="comparison-theme.css?v=20261007-2">
   <link rel="stylesheet" href="ui-polish.css?v=20261007-1">
+  <link rel="stylesheet" href="appearance.css?v=20261007-2">
+  <link rel="stylesheet" href="select-controls.css?v=20261007-2">
+  <link rel="stylesheet" href="rfm-views.css?v=20261007-2">
   <script src="comparison-theme.js?v=20261007-2" defer></script>
-  <script src="app.js?v=20261007-5" defer></script>
-  <script src="ui-polish.js?v=20261007-1" defer></script>
+  <script src="rfm-views.js?v=20261007-2" defer></script>
+  <script src="app.js?v=20261007-6" defer></script>
+  <script src="ui-polish.js?v=20261007-2" defer></script>
+  <script src="select-controls.js?v=20261007-2" defer></script>
   <script src="chart-polish.js?v=20261007-1" defer></script>
   <script src="../switch-design.js" defer></script>
 </head>
 <body>
+  <div class="boot-screen" id="boot-screen" role="status" aria-live="polite"><div id="boot-mark"></div><img class="boot-wordmark" src="assets/annaelle-wordmark.svg" alt="ANNAELLE" width="192" height="42"><span class="boot-caption">Готовим пространство аналитики</span></div>
   <a class="skip-link" href="#view">К содержимому</a>
   <div class="app-shell">
     <aside class="sidebar" id="sidebar" aria-label="Основная навигация">
-      <a class="brand" href="#overview" aria-label="ANNAELLE — обзор бизнеса"><img src="assets/annaelle-logo-ink.svg" alt="annaelle"><small>АНАЛИТИКА СТУДИИ</small></a>
+      <a class="brand" href="#overview" aria-label="ANNAELLE — обзор бизнеса"><img src="assets/annaelle-wordmark.svg" alt="annaelle" width="186" height="41"><span class="brand-tagline">СТУДИЯ ЛАЗЕРНОЙ ЭПИЛЯЦИИ</span><small>АНАЛИТИКА СТУДИИ</small></a>
       <div class="workspace-label">ДВА ФИЛИАЛА · ТАШКЕНТ</div>
       <nav id="navigation" aria-label="Разделы аналитики"></nav>
       <div class="sidebar-bottom">

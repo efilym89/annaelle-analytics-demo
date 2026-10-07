@@ -199,6 +199,8 @@
   document.addEventListener('keydown', event => {
     const layer = activeLayer();
     if (!layer && (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') interactionOrigin = document.activeElement;
+    // Escape belongs to an expanded combobox before it belongs to its dialog.
+    if (event.key === 'Escape' && document.documentElement.hasAttribute('data-select-open')) return;
     if (!layer) return;
     if (event.key === 'Escape') {
       event.preventDefault();
