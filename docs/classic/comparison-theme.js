@@ -52,6 +52,7 @@
       const value = row.querySelector('strong').textContent;
       const width = row.querySelector('.bar-fill').style.width;
       const button = node('button', 'bar-column');
+      button.style.setProperty('--bar-height', width);
       button.dataset.nav = 'sales';
       button.setAttribute('aria-label', label + ': ' + value + ' визитов. Открыть продажи');
       button.title = label + ' · ' + value + ' визитов';

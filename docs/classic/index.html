@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#7458ed">
-  <meta name="description" content="ANNAELLE — прежний Teamify-макет на том же синтетическом наборе данных. Сравнение двух вариантов дизайна; рабочие API не подключены.">
-  <title>ANNAELLE · Прежний макет · Сравнение</title>
+  <meta name="description" content="ANNAELLE — аналитика студии: продажи, клиенты, абонементы и работа команды. Интерактивный демонстрационный макет.">
+  <title>ANNAELLE · Аналитика студии</title>
   <link rel="icon" href="assets/annaelle-symbol-ink.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css?v=20261007-5">
   <link rel="stylesheet" href="comparison-theme.css?v=20261007-2">
-  <script src="comparison-theme.js?v=20261007-1" defer></script>
+  <link rel="stylesheet" href="ui-polish.css?v=20261007-1">
+  <script src="comparison-theme.js?v=20261007-2" defer></script>
   <script src="app.js?v=20261007-5" defer></script>
+  <script src="ui-polish.js?v=20261007-1" defer></script>
+  <script src="chart-polish.js?v=20261007-1" defer></script>
   <script src="../switch-design.js" defer></script>
 </head>
 <body>
@@ -18,7 +22,7 @@
   <div class="app-shell">
     <aside class="sidebar" id="sidebar" aria-label="Основная навигация">
       <a class="brand" href="#overview" aria-label="ANNAELLE — обзор бизнеса"><img src="assets/annaelle-logo-ink.svg" alt="annaelle"><small>АНАЛИТИКА СТУДИИ</small></a>
-      <div class="workspace-label">ПРОСТРАНСТВО СТУДИИ · 2 ФИЛИАЛА</div>
+      <div class="workspace-label">ДВА ФИЛИАЛА · ТАШКЕНТ</div>
       <nav id="navigation" aria-label="Разделы аналитики"></nav>
       <div class="sidebar-bottom">
         <div class="sidebar-note"><img src="assets/annaelle-symbol-ink.svg" alt=""><p>Красота в деталях.<br><strong>Уверенность в цифрах.</strong></p></div>
@@ -46,7 +50,7 @@
         <button class="outline-button" id="export-button">Экспорт</button>
       </section>
       <div class="context-bar"><span id="date-label">1–30 сентября 2026 · Ташкент, UTC+5</span><span id="sync-summary">Предпросмотр · пример данных</span></div>
-      <div class="context-comparison"><span>Прежний макет · те же данные</span><a href="../current/#overview" data-design-target="../current/">Открыть текущий дизайн ↗</a><a href="../">Выбор макета</a></div>
+      <div class="context-comparison"><span class="preview-pill">Предпросмотр</span><details class="design-options"><summary>Варианты оформления</summary><div><a href="../current/#overview" data-design-target="../current/">Другой вариант оформления ↗</a><a href="../">Сравнить макеты</a></div></details></div>
       <div id="view" tabindex="-1" aria-label="Содержимое выбранного раздела"></div>
       <footer class="footer"><div><span class="demo-badge"><span></span>Предпросмотр интерфейса</span><p>Все суммы, клиенты и события — примеры. Рабочие API не подключены.</p></div><label class="state-control">Состояние экрана <select id="view-state" aria-label="Состояние экрана"><option value="ready">Данные загружены</option><option value="loading">Загрузка</option><option value="empty">Нет данных</option><option value="error">Ошибка</option><option value="stale">Данные устарели</option></select></label></footer>
       <div class="design-credit">ANNAELLE © 2026 <a href="https://www.figma.com/community/file/1098150095325976869/teamify-team-dashboard" target="_blank" rel="noopener noreferrer">Исходный референс: Teamify · Nickelfox Design ↗</a></div>
