@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Два демонстрационных макета аналитики ANNAELLE для сравнения. Без входа, без клиентских данных.">
+  <title>ANNAELLE · Сравнение макетов</title>
+  <link rel="icon" href="current/assets/annaelle-symbol-ink.svg" type="image/svg+xml">
+  <style>
+    @font-face{font-family:Manrope;src:url('current/assets/Manrope-Variable.ttf') format('truetype');font-display:swap}
+    @font-face{font-family:Viaoda;src:url('current/assets/ViaodaLibre-Regular.ttf') format('truetype');font-display:swap}
+    *{box-sizing:border-box}body{margin:0;background:#fef7fb;color:#231f20;font-family:Manrope,Arial,sans-serif}
+    main{max-width:980px;margin:0 auto;padding:64px 24px}header img{width:180px;height:auto}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#915b69;margin:44px 0 12px}h1{font-family:Viaoda,Georgia,serif;font-size:50px;font-weight:400;line-height:1.1;margin:0 0 20px}header p{font-size:15px;color:#756b6e;max-width:590px;line-height:1.8}
+    .cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:38px 0}.card{display:flex;flex-direction:column;color:inherit;text-decoration:none;background:white;border:1px solid #e8dfe1;border-radius:20px;padding:24px;transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-3px);box-shadow:0 14px 40px #915b6910}.card:focus-visible{outline:3px solid #b77a88;outline-offset:4px}.mini{height:150px;background:#fef7fb;border-radius:12px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center;padding:20px}.mini.classic{background:#f4f1ff}.ring{height:90px;width:90px;border:13px solid #b1b795;border-top-color:#b77a88;border-radius:50%;display:grid;place-items:center;font-size:22px;font-weight:600}.classic .ring{border-color:#fc866c;border-top-color:#8162e6}.bars{display:flex;align-items:end;gap:10px;height:86px}.bars span{flex:1;min-width:0;background:#b77a88;border-radius:6px 6px 0 0;height:54%}.bars span:nth-child(2){height:72%;background:#b1b795}.bars span:nth-child(3){height:92%;background:#f0c4cd}.classic .bars span{background:#ffc485}.classic .bars span:nth-child(2){background:#58d6e5}.classic .bars span:nth-child(3){background:#8162e6}h2{font-size:19px;margin:24px 0 10px}.card p{color:#756b6e;font-size:13px;line-height:1.8;min-height:47px}.open{color:#915b69;font-size:13px;font-weight:600;margin-top:auto;padding-top:15px}.note{background:#f3e4ea;border-radius:12px;padding:18px 22px;font-size:12px;color:#915b69;line-height:1.9}footer{font-size:11px;color:#756b6e;margin-top:30px;line-height:1.8}footer a{color:inherit}
+    @media(max-width:620px){main{padding:36px 20px}h1{font-size:39px}.cards{grid-template-columns:1fr;gap:18px}.eyebrow{margin-top:35px}.mini{height:135px}}@media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <main>
+    <header><img src="current/assets/annaelle-logo-ink.svg" alt="ANNAELLE"><div class="eyebrow">Аналитика студии · Предпросмотр</div><h1>Два взгляда на один бизнес.</h1><p>Выберите вариант интерфейса. В обоих макетах одинаковые демонстрационные данные, отчёты и фильтры. Вход в аккаунт не нужен.</p></header>
+    <div class="cards">
+      <a class="card" href="current/#overview?branch=all&amp;period=month"><div class="mini" aria-hidden="true"><div class="ring">42</div><div class="bars"><span></span><span></span><span></span></div></div><h2>Фирменный дизайн ANNAELLE</h2><p>Текущий вариант: фирменные цвета, спокойная типографика и рабочая структура отчётов.</p><span class="open">Открыть текущий макет ↗</span></a>
+      <a class="card" href="classic/#overview?branch=all&amp;period=month"><div class="mini classic" aria-hidden="true"><div class="ring">42</div><div class="bars"><span></span><span></span><span></span></div></div><h2>Прежний дизайн</h2><p>Вариант в стиле Teamify: фиолетовые акценты, цветные карточки и прежняя композиция.</p><span class="open">Открыть прежний макет ↗</span></a>
+    </div>
+    <div class="note">Демонстрация, а не боевой дашборд. Все суммы, клиенты и события — примеры. Рабочие API Altegio и Kommo не подключены; реальные клиентские данные не опубликованы.</div>
+    <footer>ANNAELLE © 2026 · Демонстрационные макеты<br>Визуальный референс: <a href="https://www.figma.com/community/file/1098150095325976869/teamify-team-dashboard" target="_blank" rel="noopener noreferrer">Teamify · Nickelfox Design</a>, CC BY 4.0; адаптировано под ANNAELLE.</footer>
+  </main>
+</body>
+</html>

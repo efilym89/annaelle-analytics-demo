@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fef7fb">
+  <meta name="description" content="ANNAELLE — рабочий интерфейс аналитики студии. Предпросмотр отчётов, клиентов, абонементов и финансов на примере данных.">
+  <title>ANNAELLE · Аналитика</title>
+  <link rel="icon" href="assets/annaelle-symbol-ink.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=20261007-5">
+  <script src="app.js?v=20261007-5" defer></script>
+  <script src="../switch-design.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#view">К содержимому</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Основная навигация">
+      <a class="brand" href="#overview" aria-label="ANNAELLE — обзор бизнеса"><img src="assets/annaelle-logo-ink.svg" alt="annaelle"><small>АНАЛИТИКА СТУДИИ</small></a>
+      <div class="workspace-label"><span class="studio-dot"></span> Сеть ANNAELLE <span class="workspace-count">2 филиала</span></div>
+      <nav id="navigation" aria-label="Разделы аналитики"></nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-note"><img src="assets/annaelle-symbol-ink.svg" alt=""><p>Красота в деталях.<br><strong>Уверенность в цифрах.</strong></p></div>
+        <button class="sidebar-cta" id="help-button">Как устроены показатели <span>↗</span></button>
+        <div class="source-status">Altegio + Kommo · предпросмотр</div>
+      </div>
+    </aside>
+    <button class="sidebar-backdrop" id="sidebar-backdrop" aria-label="Закрыть меню" hidden></button>
+    <main class="main">
+      <header class="header">
+        <div class="heading-group"><button class="icon-button mobile-menu" id="menu-button" aria-label="Открыть меню" aria-expanded="false"></button><div><div class="eyebrow">ANNAELLE <span>/</span> <span id="breadcrumb-current">Аналитика</span></div><h1 id="page-title">Обзор бизнеса</h1><p id="page-subtitle">Вся студия в одном пространстве</p></div></div>
+        <div class="header-actions">
+          <button class="icon-button" id="search-button" aria-label="Поиск по аналитике" title="Поиск · Ctrl K"></button>
+          <button class="icon-button notification-button" id="notifications-button" aria-label="Открыть уведомления"><span class="notification-dot"></span></button>
+          <button class="profile-button" id="profile-button" aria-label="Профиль Николая"><span class="avatar">Н</span><span class="profile-name">Николай<small>Владелец</small></span><span class="profile-chevron">⌄</span></button>
+        </div>
+      </header>
+      <section class="toolbar" aria-label="Фильтры отчёта">
+        <div class="filter-group">
+          <label class="select-wrap"><span class="filter-icon" id="branch-icon"></span><select id="branch-filter" aria-label="Филиал"><option value="all">Все филиалы</option><option value="shota">Шота Руставели</option><option value="karasu">Карасу</option></select></label>
+          <label class="select-wrap"><span class="filter-icon" id="period-icon"></span><select id="period-filter" aria-label="Период"><option value="month">Сентябрь 2026</option><option value="october">1–7 октября 2026</option><option value="week">Последние 7 дней</option><option value="year">С начала работы</option></select></label>
+          <label class="compare-control"><input type="checkbox" id="compare-toggle" checked><span>Сравнить</span></label>
+          <button class="text-button" id="reset-filter">Сбросить</button>
+        </div>
+        <button class="outline-button" id="export-button">Экспорт</button>
+      </section>
+      <div class="context-bar"><span id="date-label">1–30 сентября 2026 · Ташкент, UTC+5</span><span id="sync-summary">Предпросмотр · пример данных</span></div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;font-size:11px;margin:0 0 20px"><a href="../">Выбор макета</a><a href="../classic/#overview" data-design-target="../classic/">Сравнить с прежним дизайном ↗</a></div>
+      <div id="view" tabindex="-1" aria-label="Содержимое выбранного раздела"></div>
+      <footer class="footer"><div><span class="demo-badge"><span></span>Предпросмотр интерфейса</span><p>Все суммы, клиенты и события — примеры. Рабочие API не подключены.</p></div><label class="state-control">Состояние экрана <select id="view-state" aria-label="Состояние экрана"><option value="ready">Данные загружены</option><option value="loading">Загрузка</option><option value="empty">Нет данных</option><option value="error">Ошибка</option><option value="stale">Данные устарели</option></select></label></footer>
+      <div class="design-credit">ANNAELLE © 2026 <a href="https://www.figma.com/community/file/1098150095325976869/teamify-team-dashboard" target="_blank" rel="noopener noreferrer">Исходный референс: Teamify · Nickelfox Design ↗</a></div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal-backdrop" hidden></div>
+  <section class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden><div class="drawer-header"><div><span class="eyebrow">ANNAELLE / ДЕТАЛИ</span><h2 id="drawer-title"></h2></div><button class="icon-button" id="drawer-close" aria-label="Закрыть панель"></button></div><div id="drawer-content" class="drawer-content"></div></section>
+  <section class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Поиск" hidden><div class="search-field"><span id="search-field-icon"></span><input id="global-search" aria-label="Найти раздел или клиента" placeholder="Найти раздел или клиента…" autocomplete="off"><button id="search-close" class="keycap" aria-label="Закрыть поиск">Esc</button></div><div id="search-results"></div><div class="search-hint">Ctrl K — открыть поиск <span>Демонстрационные данные</span></div></section>
+  <noscript><div class="noscript">Для интерактивного макета включите JavaScript.</div></noscript>
+</body>
+</html>
