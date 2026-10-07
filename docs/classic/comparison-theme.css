@@ -150,3 +150,16 @@ html{scrollbar-gutter:stable}
 @media(max-width:780px){.sidebar{position:fixed;top:10px;left:10px;bottom:10px;height:calc(100dvh - 20px);width:225px;z-index:31}.sidebar-backdrop:not([hidden]){z-index:30}.brand{width:auto;margin:0 0 18px}.header{min-height:73px}.header h1{font-size:22px}.nav-item{font-size:12px}.context-bar{font-size:8px;gap:8px;padding-bottom:16px}.context-comparison{margin-left:0}.legacy-line-panel .chart{margin-top:10px}.legacy-focus-panel .action-list{grid-template-columns:1fr}.legacy-branch-panel .bar-list{grid-template-columns:1fr}.report-meta{font-size:9px}.footer{flex-wrap:wrap}}
 @media(max-width:520px){.sidebar{height:calc(100dvh - 20px)}.header h1{font-size:20px}.toolbar{margin-top:22px}.context-bar{align-items:flex-start;flex-direction:column;gap:7px}.context-comparison{font-size:8px;flex-wrap:wrap}.legacy-service-panel,.legacy-client-panel{min-height:270px}.legacy-client-panel .clients-layout{grid-template-columns:95px minmax(0,1fr)}.highlight-stack{grid-template-columns:1fr;grid-column:auto}.highlight strong,.highlight:first-child strong{font-size:23px}.highlight .highlight-label{font-size:11px}.highlight .highlight-foot{font-size:9px}.legacy-line-panel,.legacy-focus-panel,.legacy-branch-panel{grid-column:auto;grid-row:auto}.legacy-line-panel{min-height:280px;padding:20px 17px}.chart-svg,.chart svg{min-height:170px}.legend{font-size:9px}.service-legend{font-size:10px}.state-control{margin-left:0}.design-credit{flex-wrap:wrap}.drawer-header h2{font-size:24px}.table-search{min-width:0;width:100%}}
 
+/* ANNAELLE identity: preserve the classic dashboard palette and layout. */
+.sidebar .brand{display:block;width:162px;margin:3px 0 25px;color:#292527;letter-spacing:normal;font-weight:500}
+.sidebar .brand img{display:block;width:155px;height:52px;object-fit:contain;object-position:left center}
+.sidebar .brand small{display:block;margin-top:8px;font-size:8px;line-height:1.5;letter-spacing:2.5px;font-weight:500;color:#91858a}
+.sidebar .sidebar-note{display:flex;align-items:center;gap:13px;padding:14px 12px;background:#fdf5f9;border-radius:12px}
+.sidebar .sidebar-note img{flex:none;width:27px;height:35px;object-fit:contain;opacity:.65}
+.sidebar .sidebar-note p{text-align:left;font-size:10px;line-height:1.9;color:#91858a;margin:0}
+.sidebar .sidebar-note strong{font-weight:500;color:#915b69}
+.sidebar .sidebar-cta{display:flex;align-items:center;justify-content:space-between;width:100%;padding:13px 10px 7px;font-size:10px;font-weight:500;color:#915b69;background:none;border:0;box-shadow:none;border-radius:8px}
+.sidebar .sidebar-cta:hover{background:#fdf5f9;box-shadow:none}
+.sidebar .sidebar-cta span{margin-left:7px}
+.sidebar .source-status{display:block;font-size:8px;line-height:1.6;text-align:left;color:#91858a;padding:9px 10px;margin-top:0}
+
